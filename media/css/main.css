@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5{
 }
 
 header{
-    height: 15vh;
+    height: 130px;
     /* background-color: lightgreen; */
 
     display: flex;
@@ -33,12 +33,12 @@ header{
 
 
 footer{
-    height: 5vh;
+    height: 50px;
     /* background-color: lightgreen;    */
 }
 
 .content{
-    height: 70vh;
+    height: 500px;
     /* background-color: lightblue; */
 
     display: flex;
