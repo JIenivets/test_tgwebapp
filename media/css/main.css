@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+    margin: 0;
+}
+
+header{
+    height: 15vh;
+    /* background-color: lightgreen; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+   width: 90%;
+   font-size: 35px;
+   line-height: 40px;
+}
+.undertitle{
+    margin-top: 5px;
+    width: 90%;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+
+footer{
+    height: 5vh;
+    /* background-color: lightgreen;    */
+}
+
+.content{
+    height: 70vh;
+    /* background-color: lightblue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg{
+    width: 95%;
+    height: 98%;
+
+    background-color: rgba(40, 121, 255, 0.8);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    width: 95%;
+    height: 95%;
+    /* background-color: black; */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.selectize-control{
+    width: 100%;
+    max-width: 100%;
+}
+
+#city, #mileage{
+    width: 93%;
+    max-width: 93%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 1.2px 12px;
+    
+}
+
+input:focus-visible{
+    outline: 0px;
+
+}
+#city:focus, #mileage:focus{
+    border: 1px solid #66afe9;
+}
+
+label{
+    color: white;
+    font-size: 20px;
+    margin: 30px 10px 10px 10px;
+}
+
+#send_form{
+    width: 50%;
+    height: 8%;
+
+    margin: 20% 25%;
+
+    background-color: rgba(40,121,255,0.5);
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+#send_form:hover{
+    background-color: white;
+    color: rgb(40,121,255);
+    font-weight: 600;
+    border-color: rgb(40,121,255);
+}

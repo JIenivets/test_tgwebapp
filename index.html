@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/media/css/main.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+    
+
+    <title>WbN</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Получить номер путевого листа</h1>
+        <h3 class="undertitle">Заполните форму для получения номера</h3>
+    </header>
+    <div class="content">
+        <div class="bg">
+            <div class="form">
+                <div style="height: 20px;"></div>
+                <label for="city">Город</label>
+                <input type="text" id="city" placeholder="Введите пункт назначения">
+                <label for="vehicle">Транспортное средство</label>
+                <select id="select-state vehicle" placeholder="Выберете транспортное средство">
+                    <option value="">Выберете транспортное средство</option>
+                </select>
+                <label for="mileage">Пробег</label>
+                <input type="number" id="mileage" placeholder="Введите пробег Выбранного тс">
+                <button id="send_form">Получить номер</button>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
+
+<script>
+     $(document).ready(function () {
+      $("select").selectize({
+          sortField: "text"
+      });
+    });
+
+    const cars_list = {
+        "083": "Камаз | м083кв",
+        "133": "Камаз | у133ва",
+        "084": "Mercedes | о084тк",
+        "814": "Mercedes | о814ов",
+        "870": "MAN | м870нн",
+        "506": "Камаз | о506оа",
+        "674": "Камаз | у674аа",
+        "314": "Камаз | у314вк",
+        "259": "Камаз | у259се",
+        "184": "Камаз | у184св",
+        "772": "Volvo | у772ск",
+        "841": "Ford Transit | у841вн",
+        "120": "Газ | р120кт",
+        "607": "Toyota | у607ее",
+        "880": "Камаз |  р880ен"
+    }
+    for (let key in cars_list){
+        document.getElementById("select-state vehicle").innerHTML += "<option value="+key+">"+cars_list[key]+"</option>"
+        console.log(key, cars_list[key])
+    }
+</script>
+
+<script src="https://telegram.org/js/telegram-web-app.js">
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+    document.getElementById('send_form').addEventListener('click', () => {
+        tg.sendData('Rabotaet!')
+    })
+</script>
